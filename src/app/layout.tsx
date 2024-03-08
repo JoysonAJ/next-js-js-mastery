@@ -1,6 +1,20 @@
-import { ClerkProvider } from '@clerk/nextjs'
-import './globals.css'
 import React from 'react'
+import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
+import {
+  Inter,
+  Space_Grotesk
+} from "next/font/google"
+import type { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'DevFlow',
+  description: 'A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.',
+  // icons: {
+  //   icon: '/assets/images/site-logo.svg'
+  // }
+}
  
 export default function RootLayout({
   children,
