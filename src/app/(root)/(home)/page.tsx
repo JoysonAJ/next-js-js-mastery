@@ -1,9 +1,10 @@
 // import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <div className="h1-bold">
-      hello from next js
+    <div >
+      <UserButton />
     </div>
   );
 }
