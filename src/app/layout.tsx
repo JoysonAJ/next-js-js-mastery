@@ -6,6 +6,7 @@ import {
   Space_Grotesk,
 } from "next/font/google"
 import type { Metadata } from 'next';
+import { ThemeProvider } from '@/context/ThemeProvider';
 
 
 
@@ -43,15 +44,15 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
         <ClerkProvider
           appearance={{
-            elements:{
+            elements: {
               formButtonPrimary: 'primary-gradient',
-                footerActionLink: 'primary-text-gradient hover:text-primary-500'
+              footerActionLink: 'primary-text-gradient hover:text-primary-500'
             }
           }}
         >
-        {children}
-      </ClerkProvider>
-    </body>
+          <ThemeProvider>{children}</ThemeProvider>
+        </ClerkProvider>
+      </body>
     </html >
   )
 }
