@@ -16,8 +16,9 @@
    }
 
    .background-light800_darkgradient {
-      @apply dark:dark-gradient bg-light-800;
-   }
+    /* @apply bg-light-800 dark:dark-gradient ; */
+    @apply bg-light-800 dark:bg-dark-400 ;
+  }
 
    .background-light800_dark400 {
       @apply bg-light-800 dark:bg-dark-400 !important;
@@ -176,8 +177,8 @@
    }
 
    .placeholder {
-      @apply dark:placeholder:text-light- placeholder:text-light-400;
-   }
+      @apply placeholder:text-light-400 dark:placeholder:text-light-500;
+    }
 
    .invert-colors {
       @apply invert dark:invert-0;
